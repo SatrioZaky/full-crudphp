@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 09, 2023 at 09:38 AM
+-- Generation Time: Aug 28, 2023 at 08:37 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -65,9 +65,9 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `nama`, `jumlah`, `harga`, `barcode`, `tanggal`) VALUES
-(8, 'Flashdisk', '10', '100000', '175798', '2023-08-08 04:27:52'),
+(8, 'Flashdisk', '10', '100000', '175798', '2023-07-12 04:27:52'),
 (9, 'Laptop', '5', '11000000', '471606', '2023-08-08 04:29:36'),
-(10, 'Mouse', '25', '350000', '302594', '2023-08-08 04:30:05');
+(10, 'Mouse', '25', '350000', '302594', '2023-09-22 04:30:05');
 
 -- --------------------------------------------------------
 
@@ -95,6 +95,29 @@ INSERT INTO `mahasiswa` (`id_mahasiswa`, `nama`, `prodi`, `jk`, `telepon`, `alam
 (6, 'fsdfsdfs', 'Teknik Informatika', 'Perempuan', '3452525', '', 'sdgss@gmail.com', '64cc70fa5b296.png'),
 (7, 'Satrio Zaky', 'Teknik Informatika', 'Laki-laki', '088485834853', '<p><a href=\"/ckfinder/userfiles/images/foto%20alamat/3.PNG\" target=\"_blank\"><img alt=\"\" src=\"/ckfinder/userfiles/images/foto%20alamat/3.PNG\" style=\"width:100%\" /></a>Gambar Alamat</p>\r\n', 'satrio@gmail.com', '64d1b4feb4890.jpg');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pegawai`
+--
+
+CREATE TABLE `pegawai` (
+  `id_pegawai` int(11) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `jabatan` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `telepon` varchar(100) NOT NULL,
+  `alamat` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pegawai`
+--
+
+INSERT INTO `pegawai` (`id_pegawai`, `nama`, `jabatan`, `email`, `telepon`, `alamat`) VALUES
+(1, 'ilham ', 'direktur', 'iham@gmail.com', '364574686895979', 'Cimahi'),
+(2, 'dwfsdfsd', 'sdfsdfsdfsd', 'dfadfaf@gmail.com', '2352545', 'asdfasdasd');
+
 --
 -- Indexes for dumped tables
 --
@@ -118,6 +141,12 @@ ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id_mahasiswa`);
 
 --
+-- Indexes for table `pegawai`
+--
+ALTER TABLE `pegawai`
+  ADD PRIMARY KEY (`id_pegawai`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -138,6 +167,12 @@ ALTER TABLE `barang`
 --
 ALTER TABLE `mahasiswa`
   MODIFY `id_mahasiswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `pegawai`
+--
+ALTER TABLE `pegawai`
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

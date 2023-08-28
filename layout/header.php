@@ -103,6 +103,15 @@ include 'config/app.php';
                         </li>
 
                         <li class="nav-item">
+                            <a href="email.php" class="nav-link">
+                                <i class="nav-icon fas fa-envelope"></i>
+                                <p>
+                                    Kirim Email (PHPMailer)
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
                             <a href="akun.php" class="nav-link">
                                 <i class="nav-icon fas fa-user-cog"></i>
                                 <p>
